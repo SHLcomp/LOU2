@@ -54,6 +54,7 @@ const Hero = () => {
     tl.to(imgRef.current, {
       y: "-100vh",
       x: "30vw",
+      display: "none"
     });
   });
 
