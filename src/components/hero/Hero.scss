@@ -12,17 +12,8 @@
     position: relative; // needed to hide the overflow :)
 
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at center, rgba(255, 255, 255, 0.03), transparent 70%);
-        pointer-events: none;
-        z-index: 1;
-    }
+    
+
 
     .top {
         width: 100%;
@@ -36,6 +27,7 @@
         position: relative;
         // z-index: 200;
         font-size: 1.3em;
+
         h1 {
             font-size: 4em;
             color: var(--text-light);

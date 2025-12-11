@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Testimonials = () => {
   return (
-    <div className="testimonials">
+    <div className="testimonials noise">
       <h1>
         Real Stories From <span>Real Teams</span>
       </h1>

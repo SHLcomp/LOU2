@@ -60,7 +60,7 @@ const Process = () => {
   })
   
   return (
-    <div className="process" ref={pageRef}>
+    <div className="process noise" ref={pageRef}>
       <div className="img" ref={imgRef}>
         <img src={earth} alt="" />
       </div>

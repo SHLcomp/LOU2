@@ -33,7 +33,21 @@ body{
   filter: drop-shadow(3px 2px 1px var(--silver-glow));
   text-decoration: underline;
 }
-
+.noise{
+  position: relative;
+  &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('https://images.pexels.com/photos/978487/pexels-photo-978487.jpeg');
+        pointer-events: none;
+        opacity: .03;
+        background-size: cover;
+    }
+}
 
 :root {
   --nav-bg-color: transparent;

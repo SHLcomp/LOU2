@@ -92,7 +92,7 @@ const Second = () => {
   });
 
   return (
-    <div className="sec" ref={pageRef}>
+    <div className="sec noise" ref={pageRef}>
       <div className="top">
         <h1 ref={textRef}>
           Illuminating <span>Bold</span> Experiences

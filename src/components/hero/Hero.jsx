@@ -59,7 +59,7 @@ const Hero = () => {
   });
 
   return (
-    <div className="hero" ref={pageRef}>
+    <div className="hero noise" ref={pageRef}>
       <div className="top">
         <h1 ref={headerRef}>
           L<span>ight</span> O<span>f the</span> U<span>niverse</span>
