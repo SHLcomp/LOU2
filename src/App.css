@@ -48,6 +48,10 @@ body{
         background-size: cover;
     }
 }
+.a{
+  color: var(--text);
+  text-decoration: none;
+}
 
 :root {
   --nav-bg-color: transparent;
