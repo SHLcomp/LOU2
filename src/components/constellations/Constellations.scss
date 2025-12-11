@@ -56,10 +56,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-top: 10vh;
+        padding-block: 10vh;
 
         .left {
             width: 100%;
+            h1{
+                font-size: 2em;
+            }
         }
 
         .right {
