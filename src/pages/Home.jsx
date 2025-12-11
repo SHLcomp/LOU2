@@ -6,6 +6,9 @@ import Constellations from '../components/constellations/Constellations';
 import Services from '../components/services/Services';
 import Process from '../components/process/Process';
 import Testimonials from '../components/testimonials/Testimonials';
+import Footer from '../components/footer/Footer';
+import ContactForm from '../components/contactForm/ContactForm';
+import ContactInfo from '../components/contactInfo/ContactInfo';
 
 const Home = () => {
   return (
@@ -17,6 +20,9 @@ const Home = () => {
         <Services />
         <Testimonials />
         <Process />
+        <ContactForm />
+        <ContactInfo/>
+        <Footer />
     </div>
   )
 }

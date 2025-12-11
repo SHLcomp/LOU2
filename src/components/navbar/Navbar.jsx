@@ -25,6 +25,7 @@ const Navbar = () => {
         <li>Orbit</li>
         <li>Testimonials</li>
         <li>Works</li>
+        <li>About Us</li>
       </ul>
 
       <h4>Contact</h4>
