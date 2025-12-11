@@ -1,0 +1,101 @@
+.process{
+    min-height: 100vh;
+    background: var(--main-bg);
+    width: 100%;
+    position: relative;
+    .img{
+        width: 20%;
+        position: absolute;
+        right: 37vw; // trying to center it
+        img{
+            width: 100%;
+        }
+    }
+    .txt-cont{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-inline: 2em;
+        padding-block: 1em;
+        color: var(--text-light);
+        padding-top: 10vh;
+        .left{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 1em;
+            position: relative;
+            h1{
+                font-family: 'exbed';
+                span{
+                    color: var(--golden-glow);
+                }
+            }
+            p{
+                width: 80%;
+            }
+            .cta{
+                position: absolute;
+                top: 100%;
+                margin-top: 1em;
+            }
+        }
+        .right{
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                gap: 1em;
+                font-size: 1.2em;
+                li{
+                    span{
+                        color: var(--golden-glow);
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+@media (max-width:600px) {
+    .process{
+        .img{
+            top: 100%;
+            display: none;
+        }
+        .txt-cont{
+            flex-direction: column;
+            // height: 200vh; // this makes space in between left & right for the globe
+            justify-content: space-between;
+            gap: 20vh;
+            .left{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width:600px) and (max-width:1020px) {
+    .process{
+        .img{
+            top: 23%;
+            right: 10vw;
+        }
+        .txt-cont{
+            width: 100%;
+            flex-direction: column;
+            gap: clamp(10vh, 12vh, 15vh);
+            .left{
+                width: 100%;
+            }
+            .right{
+                width: 100%;
+            }
+        }
+    }
+}

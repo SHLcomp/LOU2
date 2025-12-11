@@ -1,0 +1,128 @@
+.sec {
+    background: var(--main-bg);
+    padding-top: 30vh;
+    height: 100vh;
+
+    .top {
+        color: var(--text-light);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+            font-size: 6em;
+
+            // position: absolute;
+            span {
+                font-weight: bolder;
+                color: var(--golden-glow);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+        }
+        p{
+            padding-inline: 20em;
+        }
+    }
+
+    .decor {
+        img {
+            width: 20%;
+
+            &:nth-child(1) {
+                position: relative;
+                top: -50vh;
+            }
+
+            &:nth-child(2) {
+                position: relative;
+                right: 10vw;
+                top: 10vh;
+            }
+
+            &:nth-child(3) {
+                position: relative;
+                top: -60vh;
+                left: 30vw;
+            }
+
+            &:nth-child(4) {
+                position: relative;
+                right: -10vw;
+                top: 15vh;
+            }
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .sec{
+        padding-top: 40vh;
+        .top{
+            gap: 2em;
+            padding-inline: 4vw;
+            h1{
+                font-size: 3em;
+            }
+            p{
+                padding: 0 !important;
+                width: 100%;
+
+            }
+        }
+    }
+}
+
+@media (min-width:600px) and (max-width:1010px) {
+    .sec{
+        padding-top: 40vh;
+        .top{
+            gap: 2em;
+            font-size: 2em;
+            padding-inline: 2vw;
+            h1{
+                font-size: 2em;
+                // word-break: keep-all;
+                word-spacing: -10px;
+                
+                word-break: normal;
+                white-space: normal;
+                overflow-wrap: normal;
+            }
+            p{
+                padding: 0 !important;
+                width: 100%;
+
+            }
+        }
+        .decor {
+        img {
+            width: 20%;
+
+            &:nth-child(1) {
+                position: relative;
+                top: -80vh;
+            }
+
+            &:nth-child(2) {
+                position: relative;
+                right: 10vw;
+                top: 2vh;
+            }
+
+            &:nth-child(3) {
+                position: relative;
+                top: -70vh;
+                left: 30vw;
+            }
+
+            &:nth-child(4) {
+                position: relative;
+                right: -10vw;
+                top: 15vh;
+            }
+        }
+    }
+    }
+}

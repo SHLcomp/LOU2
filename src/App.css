@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  overflow-x: hidden;
+}
+
+/* shared styles */
+.cta {
+  padding-block: 10px;
+  padding-inline: 20px;
+  border-radius: 10px;
+  background-color: var(--cta-bg);
+  color: var(--text);
+  transition: 0.3s ease;
+  cursor: pointer;
+  filter: drop-shadow(3px 2px 1px var(--golden-glow));
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+.cta2 {
+  padding-block: 5px;
+  padding-inline: 10px;
+  border-radius: 10px;
+  /* background-color: var(--cta-bg2); */
+  color: var(--text);
+  transition: 0.3s ease;
+  cursor: pointer;
+  filter: drop-shadow(3px 2px 1px var(--silver-glow));
+  text-decoration: underline;
+}
+
+
+:root {
+  --nav-bg-color: transparent;
+  --text: #1f1f1f;
+  --text-light: #ffff;
+  --text-hover: #4b4a4a;
+  --text-hover-light: #d8d8d8;
+  --hero-bg: radial-gradient(circle at top, #0a2342, #08172f, #050b1f, #020617);
+  /* --hero-bg: url("https://cdn.pixabay.com/photo/2017/03/27/14/31/stars-2179083_1280.jpg"); */
+  --main-bg: radial-gradient(circle, #0a2342, #08172f, #050b1f, #020617);
+  /* --main-bg: url('https://cdn.pixabay.com/photo/2017/03/27/14/31/stars-2179083_1280.jpg'); */
+  --cta-bg: #38bdf8;
+  --cta-bg-hover: #0ea5e9;
+  --font-fam: "";
+  --gold-color: "";
+
+  --secondary-bg-color: #cad2d3; /*0r#F2F2F4 #efece7 for more silvery color*/
+  --image-highlight: #ffc671;
+  --golden-glow: #d4af37;
+  --silver-glow: #c0c0c0;
+  --icons: #ffc671;
+  --shadow: #12122b;
+}
+
+/* git add .
+git commit -m "Update hero section and navbar"
+git push origin main */

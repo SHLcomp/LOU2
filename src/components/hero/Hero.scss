@@ -1,0 +1,148 @@
+.hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--hero-bg);
+    color: #f8fafc;
+    padding: 0 2rem;
+    // overflow: hidden;
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at center, rgba(255, 255, 255, 0.03), transparent 70%);
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .top {
+        width: 100%;
+        padding: 1em 2em;
+        font-family: "Thegoodmonolith Times New Roman", sans-serif;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+        margin-top: 25vh;
+        position: relative;
+        // z-index: 200;
+        font-size: 1.3em;
+        h1 {
+            font-size: 5em;
+            color: var(--text-light);
+            font-family: 'Times New Roman', Times, serif;
+            display: inline;
+
+
+            span {
+                color: var(--golden-glow);
+                display: inline;
+
+            }
+        }
+
+        h4 {
+            padding-inline: 20em;
+            width: 100%;
+            font-size: smaller;
+        }
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        float: left;
+        width: 100%;
+        position: absolute;
+        top: 60vh;
+
+        img {
+            width: 45%;
+        }
+    }
+}
+
+
+@media (max-width:600px) {
+    .hero {
+        padding: 0;
+        top: 0;
+
+        .top {
+            width: 100% !important;
+            margin-top: 10vh !important;
+            padding: 1em;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                font-size: 3em;
+                width: 100%;
+                word-break: normal;
+                white-space: normal;
+                overflow-wrap: normal;
+            }
+
+            h4 {
+                padding-inline: 0 !important;
+                width: 100% !important;
+                text-align: center;
+            }
+        }
+
+        .bottom {
+            top: 85vh !important;
+
+            img {
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media (min-width:600px) and (max-width: 1020px) {
+    .hero {
+        padding: 0;
+        top: 0;
+
+        .top {
+            width: 100% !important;
+            margin-top: 20vh !important;
+            padding: 1em;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                font-size: 3em;
+                width: 100%;
+                word-break: normal;
+                white-space: normal;
+                overflow-wrap: normal;
+            }
+
+            h4 {
+                padding-inline: 0 !important;
+                width: 100% !important;
+                text-align: center;
+            }
+        }
+
+        .bottom {
+            top: 55vh !important;
+
+            img {
+                width: 90%;
+            }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+import React, { useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitText from "gsap/src/SplitText";
+import "./Hero.scss";
+import { useGSAP } from "@gsap/react";
+import earth from "../../assets/earth.png";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const Hero = () => {
+  const headerRef = useRef(null);
+  const subheaderRef = useRef(null);
+  const pageRef = useRef(null);
+  const imgRef = useRef(null);
+
+  useGSAP(() => {
+    let split = new SplitText(headerRef.current, { type: "chars" });
+    let split2 = new SplitText(subheaderRef.current, { type: "lines" });
+
+    // split.chars.forEach((c) => (c.style.display = "inline"));
+    // split2.lines.forEach((l) => (l.style.display = "inline"));
+
+    let chars = split.chars;
+    let lines = split2.lines;
+
+    gsap.from(chars, {
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.06,
+      ease: "expo.out",
+      yPercent: 100,
+      delay: .5,
+    });
+
+    gsap.from(lines, {
+      opacity: 0,
+      yPercent: 100,
+      duration: 0.8,
+      stagger: 0.06,
+      ease: "expo.out",
+      delay: 1,
+    });
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: pageRef.current,
+        start: "49% 40%",
+        end: "49% top",
+        scrub: true,
+      },
+    });
+
+    tl.to(imgRef.current, {
+      y: "-100vh",
+      x: "30vw",
+    });
+  });
+
+  return (
+    <div className="hero" ref={pageRef}>
+      <div className="top">
+        <h1 ref={headerRef}>
+          L<span>ight</span> O<span>f the</span> U<span>niverse</span>
+        </h1>
+        <h4 ref={subheaderRef}>
+          Light of the Universe crafts extraordinary experiences through
+          innovation, elegance, and attention to detail. We design
+          transformative events, concepts, and environments that reflect
+          culture, emotion, and purpose — turning every moment into an
+          illuminated memory.
+        </h4>
+      </div>
+
+      <div className="bottom">
+        <img src={earth} alt="" ref={imgRef} />
+      </div>
+    </div>
+  );
+};
+
+export default Hero;
