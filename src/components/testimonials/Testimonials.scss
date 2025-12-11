@@ -1,0 +1,99 @@
+.testimonials{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 10vh;
+    gap: 1em;
+    // background: var(--main-bg);
+    background: var(--secondary-bg);
+    color: var(--text-light);
+    h1{
+        font-family: 'exbed';
+        span{
+            color: var(--golden-glow);
+        }
+    }
+    p{
+        width: 50%;
+    }
+    .cards{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 2em;
+        .card{
+            width: clamp(100px, 25vw, 500px);
+            height: clamp(300px, 10vh, 700px);
+            box-shadow: 1px 2px 9px var(--golden-glow);
+            padding-inline: 2em;
+            padding-block: 1em;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            p{
+                width: 100% !important;
+            }
+            .stars{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                i{
+                    color: var(--silver-glow);
+                    &:nth-child(1){
+                        color: var(--golden-glow);
+                    }
+                     &:nth-child(2){
+                        color: var(--golden-glow);
+                    }
+                     &:nth-child(3){
+                        color: var(--golden-glow);
+                    }
+                     &:nth-child(4){
+                        color: var(--golden-glow);
+                    }
+                }
+            }
+            .pfp{
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                gap: 1vw;
+                img{
+                    border-radius: 50%;
+                    width: 50px;
+                }
+                .pfp-info{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    
+                    p{
+                        width: 100% !important;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .testimonials{
+        padding-inline: 10px;
+        h1{
+            width: 100%;
+        }
+        p{
+            width: 100%;
+        }
+        .cards{
+            // gap: 1em;
+            .card{
+                width: clamp(40px, 70vw, 700px);
+            }
+        }
+    }
+}

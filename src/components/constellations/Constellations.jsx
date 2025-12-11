@@ -10,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Constellations = () => {
   const pageRef = useRef(null);
   const txt1Ref = useRef(null);
+  const txt2Ref = useRef(null);
   const subtxt2Ref = useRef(null);
   const subtxt1Ref = useRef(null);
   const ctaRef = useRef(null);
@@ -23,6 +24,10 @@ const Constellations = () => {
       },
     });
 
+    tl.from(txt2Ref.current, {
+      opacity: 0,
+      x: 10,
+    });
     tl.from(txt1Ref.current, {
       opacity: 0,
       x: 10,
@@ -34,7 +39,6 @@ const Constellations = () => {
     tl.from(subtxt1Ref.current, {
       opacity: 0,
       x: 10,
-      delay: 0.2,
     });
   
     
@@ -43,7 +47,7 @@ const Constellations = () => {
   return (
     <div className="const" ref={pageRef}>
       <div className="left">
-        <span>Lou Services</span>
+        <span ref={txt2Ref}>L.O.U Services</span>
         <h1 ref={txt1Ref}>
           We Map the Path From <span>Spark</span> to <span>Spectacle</span>
         </h1>

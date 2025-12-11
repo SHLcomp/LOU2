@@ -5,6 +5,7 @@ import Second from '../components/second/Second';
 import Constellations from '../components/constellations/Constellations';
 import Services from '../components/services/Services';
 import Process from '../components/process/Process';
+import Testimonials from '../components/testimonials/Testimonials';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         <Second />
         <Constellations />
         <Services />
+        <Testimonials />
         <Process />
     </div>
   )

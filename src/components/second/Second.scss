@@ -12,7 +12,8 @@
         justify-content: space-between;
 
         h1 {
-            font-size: 6em;
+            font-size: 4em;
+            font-family: 'exbed';
 
             // position: absolute;
             span {
@@ -21,7 +22,8 @@
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
         }
-        p{
+
+        p {
             padding-inline: 20em;
         }
     }
@@ -57,72 +59,108 @@
 }
 
 @media (max-width:600px) {
-    .sec{
+    .sec {
         padding-top: 40vh;
-        .top{
+
+        .top {
             gap: 2em;
             padding-inline: 4vw;
-            h1{
-                font-size: 3em;
+
+            h1 {
+                font-size: 2.4em;
             }
-            p{
+
+            p {
                 padding: 0 !important;
                 width: 100%;
 
+            }
+        }
+
+        .decor {
+            img {
+                width: 20%;
+
+                &:nth-child(1) {
+                    position: relative;
+                    top: -47vh !important;
+                }
+
+                &:nth-child(2) {
+                    position: relative;
+                    right: 10vw;
+                    top: 4vh !important;
+                }
+
+                &:nth-child(3) {
+                    position: relative;
+                    top: -45vh !important;
+                    left: 30vw;
+                }
+
+                &:nth-child(4) {
+                    position: relative;
+                    right: -10vw;
+                    top: 5vh !important;
+                }
             }
         }
     }
 }
 
 @media (min-width:600px) and (max-width:1010px) {
-    .sec{
+    .sec {
         padding-top: 40vh;
-        .top{
+
+        .top {
             gap: 2em;
             font-size: 2em;
             padding-inline: 2vw;
-            h1{
+
+            h1 {
                 font-size: 2em;
                 // word-break: keep-all;
                 word-spacing: -10px;
-                
+
                 word-break: normal;
                 white-space: normal;
                 overflow-wrap: normal;
             }
-            p{
+
+            p {
                 padding: 0 !important;
                 width: 100%;
 
             }
         }
+
         .decor {
-        img {
-            width: 20%;
+            img {
+                width: 20%;
 
-            &:nth-child(1) {
-                position: relative;
-                top: -80vh;
-            }
+                &:nth-child(1) {
+                    position: relative;
+                    top: -80vh !important;
+                }
 
-            &:nth-child(2) {
-                position: relative;
-                right: 10vw;
-                top: 2vh;
-            }
+                &:nth-child(2) {
+                    position: relative;
+                    right: 10vw;
+                    top: 2vh !important;
+                }
 
-            &:nth-child(3) {
-                position: relative;
-                top: -70vh;
-                left: 30vw;
-            }
+                &:nth-child(3) {
+                    position: relative;
+                    top: -70vh !important;
+                    left: 30vw;
+                }
 
-            &:nth-child(4) {
-                position: relative;
-                right: -10vw;
-                top: 15vh;
+                &:nth-child(4) {
+                    position: relative;
+                    right: -10vw;
+                    top: 15vh !important;
+                }
             }
         }
-    }
     }
 }

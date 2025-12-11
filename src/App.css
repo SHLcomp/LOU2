@@ -50,7 +50,21 @@ body{
   --font-fam: "";
   --gold-color: "";
 
-  --secondary-bg-color: #cad2d3; /*0r#F2F2F4 #efece7 for more silvery color*/
+  --secondary-bg: #cad2d3; /*0r#F2F2F4 #efece7 for more silvery color*/
+   --accent-bg: radial-gradient(
+    circle at top left,
+    #f5f4f9 0%,    /* soft off-white */
+    #e2e0f0 40%,   /* pale lavender/gray tint */
+    #c7c4d9 70%,   /* subtle muted periwinkle */
+    #a8a6c0 100%   /* gentle grayish blue */
+  );
+  --secondary-bg: radial-gradient(
+  circle at top,
+  #2b2a3a 0%,
+  #3c3b5a 50%,
+  #4e4d78 100%
+);
+
   --image-highlight: #ffc671;
   --golden-glow: #d4af37;
   --silver-glow: #c0c0c0;
@@ -59,5 +73,5 @@ body{
 }
 
 /* git add .
-git commit -m "Update hero section and navbar"
+git commit -m "Update many things"
 git push origin main */

@@ -8,7 +8,8 @@
     background: var(--hero-bg);
     color: #f8fafc;
     padding: 0 2rem;
-    // overflow: hidden;
+    overflow: hidden !important;
+    position: relative; // needed to hide the overflow :)
 
 
     &::before {
@@ -36,9 +37,9 @@
         // z-index: 200;
         font-size: 1.3em;
         h1 {
-            font-size: 5em;
+            font-size: 4em;
             color: var(--text-light);
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'exbed';
             display: inline;
 
 
@@ -64,7 +65,8 @@
         float: left;
         width: 100%;
         position: absolute;
-        top: 60vh;
+        top: 70vh;
+        left: -10vw;
 
         img {
             width: 45%;

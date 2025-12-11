@@ -62,7 +62,7 @@ const Services = () => {
         </p>
       </div>
 
-      <div className="cont">
+      {/* <div className="cont">
         <div className="cards">
           {data.map((item) => {
             return (
@@ -79,7 +79,7 @@ const Services = () => {
             );
           })}
         </div>
-      </div>
+      </div> */}
       
     </div>
   );

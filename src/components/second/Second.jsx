@@ -54,8 +54,8 @@ const Second = () => {
 
     rocks.forEach((rock) => {
       gsap.to(rock.current, {
-        xPercent: gsap.utils.random(-10, 10),
-        yPercent: gsap.utils.random(-10, 10),
+        xPercent: gsap.utils.random(-5, 5),
+        yPercent: gsap.utils.random(-2, 2),
         duration: gsap.utils.random(2, 4),
         repeat: -1,
         yoyo: true,
@@ -65,7 +65,7 @@ const Second = () => {
 
     rocks.forEach((rock) => {
       gsap.to(rock.current, {
-        y: 100,
+        y: -50,
         ease: "power1.inOut",
         scrollTrigger: {
           trigger: pageRef.current,
