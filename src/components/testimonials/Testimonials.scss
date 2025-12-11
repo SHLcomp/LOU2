@@ -93,6 +93,7 @@
             // gap: 1em;
             .card{
                 width: clamp(40px, 70vw, 700px);
+                pointer-events: none;
             }
         }
     }
