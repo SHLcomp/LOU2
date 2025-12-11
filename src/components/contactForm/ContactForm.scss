@@ -69,10 +69,10 @@
                 background: var(--cta-bg);
                 color: #fff;
                 cursor: pointer;
-                transition: background .5s ease;
+                transition: background .3s ease;
 
                 &:hover {
-                    background: var(--accent-color);
+                    background: var(--cta-bg-hover);
                 }
             }
         }
