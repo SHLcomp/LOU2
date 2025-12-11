@@ -38,7 +38,7 @@ const Second = () => {
       opacity: 0,
       yPercent: 100,
       duration: 0.8,
-      stagger: 0.06,
+      stagger: 0.009,
       ease: "expo.out",
     });
 
@@ -46,7 +46,7 @@ const Second = () => {
       opacity: 0,
       yPercent: 100,
       duration: 0.3,
-      stagger: 0.06,
+      stagger: 0.009,
       ease: "expo.out",
     });
 
