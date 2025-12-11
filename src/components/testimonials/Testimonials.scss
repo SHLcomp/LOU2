@@ -80,6 +80,46 @@
     }
 }
 
+
+
+@media (min-width: 600px) and (max-width: 1020px) {
+  .testimonials {
+    padding-inline: 4vw;
+    padding-block: 8vh;
+
+    h1 {
+      font-size: 2.2em;
+      text-align: center;
+    }
+
+    p {
+      width: 80%;
+      font-size: 1.1em;
+      text-align: center;
+    }
+
+    .cards {
+      gap: 1.5em;
+      justify-content: center;
+
+      .card {
+        width: clamp(250px, 40vw, 420px);
+        height: auto; 
+        padding: 1.5em;
+      }
+
+      .stars i {
+        font-size: 1.1em;
+      }
+
+      .pfp img {
+        width: 45px;
+      }
+    }
+  }
+}
+
+
 @media (max-width:600px) {
     .testimonials{
         padding-inline: 10px;
