@@ -29,7 +29,6 @@ const Services = () => {
                 end: "bottom 30%",
                 pin: pinnedRef.current,
                 scrub: true,
-                markers:true
             }
         });
 
