@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./Services.scss";
-import data from "../../data/services";
+// import data from "../../data/services";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import SplitText from "gsap/src/SplitText";

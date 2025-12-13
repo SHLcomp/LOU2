@@ -15,66 +15,73 @@ const Hero = () => {
   const imgRef = useRef(null);
 
   useGSAP(() => {
-    const ctx = gsap.context(()=>{
+    const ctx = gsap.context(() => {
       let split = new SplitText(headerRef.current, { type: "chars" });
-    let split3 = new SplitText(headerRef.current, { type: "lines" });
-    let split2 = new SplitText(subheaderRef.current, { type: "lines" });
+      let split3 = new SplitText(headerRef.current, { type: "lines" });
+      let split2 = new SplitText(subheaderRef.current, { type: "lines" });
 
-    // split.chars.forEach((c) => (c.style.display = "inline"));
-    // split2.lines.forEach((l) => (l.style.display = "inline"));
+      // split.chars.forEach((c) => (c.style.display = "inline"));
+      // split2.lines.forEach((l) => (l.style.display = "inline"));
 
-    let chars = split.chars;
-    let lines = split2.lines;
-    let lines2 = split3.lines;
+      let chars = split.chars;
+      let lines = split2.lines;
+      let lines2 = split3.lines;
 
-    gsap.from(chars, {
-      opacity: 0,
-      duration: 0.6,
-      stagger: 0.06,
-      ease: "expo.out",
-      yPercent: 100,
-      delay: 0.5,
+      gsap.from(chars, {
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.06,
+        ease: "expo.out",
+        yPercent: 100,
+        delay: 0.5,
+      });
+
+      gsap.from(lines2, {
+        opacity: 0,
+        duration: 1,
+        stagger: 0.06,
+        ease: "expo.out",
+        yPercent: 100,
+        delay: 0.5,
+        x: 30,
+      });
+
+      gsap.from(lines, {
+        opacity: 0,
+        yPercent: 100,
+        duration: 0.8,
+        stagger: 0.06,
+        ease: "expo.out",
+        delay: 1,
+      });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: pageRef.current,
+          start: "50% 50%",
+          end: "center top",
+          scrub: true,
+        },
+      });
+
+      tl.to(imgRef.current, {
+        y: "-140vh",
+        x: "30vw",
+        display: "none",
+        ease: "expo.out",
+      });
     });
 
-    gsap.from(lines2, {
-      opacity: 0,
-      duration: 1,
-      stagger: 0.06,
-      ease: "expo.out",
-      yPercent: 100,
-      delay: 0.5,
-      x: 30,
-    });
-
-    gsap.from(lines, {
-      opacity: 0,
-      yPercent: 100,
-      duration: 0.8,
-      stagger: 0.06,
-      ease: "expo.out",
-      delay: 1,
-    });
-
-   
-
-    const tl = gsap.timeline({
+    gsap.to(pageRef.current, {
+      "--sweep-x": "30%",
       scrollTrigger: {
         trigger: pageRef.current,
-        start: "50% 50%",
+        start: "center 49%",
         end: "center top",
-        scrub: true,
+        scrub: 0.5,
+        markers:true
       },
     });
-
-    tl.to(imgRef.current, {
-      y: "-140vh",
-      x: "30vw",
-      display: "none",
-      ease:"expo.out"
-    });
-    })
-    
-
 
     return () => ctx.revert();
   }, []);
