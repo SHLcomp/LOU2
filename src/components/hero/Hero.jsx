@@ -15,7 +15,8 @@ const Hero = () => {
   const imgRef = useRef(null);
 
   useGSAP(() => {
-    let split = new SplitText(headerRef.current, { type: "chars" });
+    const ctx = gsap.context(()=>{
+      let split = new SplitText(headerRef.current, { type: "chars" });
     let split3 = new SplitText(headerRef.current, { type: "lines" });
     let split2 = new SplitText(subheaderRef.current, { type: "lines" });
 
@@ -71,7 +72,12 @@ const Hero = () => {
       display: "none",
       ease:"expo.out"
     });
-  });
+    })
+    
+
+
+    return () => ctx.revert();
+  }, []);
 
   return (
     <div className="hero noise" ref={pageRef}>
