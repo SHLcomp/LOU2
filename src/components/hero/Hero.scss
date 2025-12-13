@@ -11,6 +11,7 @@
     overflow: hidden !important;
     position: relative; // needed to hide the overflow :)
     --sweep-x: -35%;
+
     &::after {
         content: "";
         position: absolute;
@@ -28,7 +29,7 @@
 
         transform: translateX(var(--sweep-x));
         filter: blur(26px);
-        mix-blend-mode: screen; 
+        mix-blend-mode: screen;
         pointer-events: none;
         z-index: 0;
 
@@ -73,6 +74,14 @@
             font-size: smaller;
             text-align: center;
             font-family: 'exbed';
+        }
+
+        .ctas {
+            display: flex;
+            justify-content: space-around;
+            gap: 2em;
+            z-index: 200;
+            margin-top: 20px;
         }
     }
 

@@ -100,6 +100,10 @@ const Hero = () => {
           culture, emotion, and purpose — turning every moment into an
           illuminated memory.
         </h4>
+        <div className="ctas">
+          <h3 className="cta">Illuminate Your Vision</h3>
+          <h3 className="cta2">View Our Work</h3>
+        </div>
       </div>
 
       <div className="bottom">
