@@ -1,3 +1,4 @@
+
 .hero {
     height: 100vh;
     width: 100%;
@@ -6,14 +7,16 @@
     align-items: center;
     justify-content: space-between;
     background: var(--hero-bg);
-    color: #f8fafc;
+    color: var(--text-light);
     padding: 0 2rem;
     overflow: hidden !important;
     position: relative; // needed to hide the overflow :)
+
+
+
     .top {
         width: 100%;
         padding: 1em 2em;
-        font-family: "Thegoodmonolith Times New Roman", sans-serif;
         display: flex;
         flex-direction: column;
         gap: 1em;
@@ -67,6 +70,13 @@
         img {
             width: 45%;
         }
+    }
+}
+
+
+@keyframes openHero {
+    to {
+        height: 100vh !important;
     }
 }
 

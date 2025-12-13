@@ -32,7 +32,7 @@ const Hero = () => {
       stagger: 0.06,
       ease: "expo.out",
       yPercent: 100,
-      delay: .5,
+      delay: 0.5,
     });
 
     gsap.from(lines2, {
@@ -41,8 +41,8 @@ const Hero = () => {
       stagger: 0.06,
       ease: "expo.out",
       yPercent: 100,
-      delay: .5,
-      x: 30
+      delay: 0.5,
+      x: 30,
     });
 
     gsap.from(lines, {
@@ -54,11 +54,13 @@ const Hero = () => {
       delay: 1,
     });
 
+   
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: pageRef.current,
-        start: "49% 40%",
-        end: "49% top",
+        start: "50% 50%",
+        end: "center top",
         scrub: true,
       },
     });
@@ -66,7 +68,8 @@ const Hero = () => {
     tl.to(imgRef.current, {
       y: "-100vh",
       x: "30vw",
-      display: "none"
+      display: "none",
+      ease:"expo.out"
     });
   });
 
