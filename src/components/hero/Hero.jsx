@@ -99,7 +99,6 @@ const Hero = () => {
         start: "center 49%",
         end: "center top",
         scrub: 0.5,
-        markers:true
       },
     });
 
