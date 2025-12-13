@@ -57,6 +57,11 @@ const Hero = () => {
         delay: 1,
       });
 
+      gsap.to(subheaderRef.current, {
+        className: "animated",
+        delay: 1
+      })
+
       gsap.from(ctas.current, {
         opacity: 0,
         yPercent: 100,
