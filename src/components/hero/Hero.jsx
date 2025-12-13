@@ -16,6 +16,7 @@ const Hero = () => {
 
   useGSAP(() => {
     let split = new SplitText(headerRef.current, { type: "chars" });
+    let split3 = new SplitText(headerRef.current, { type: "lines" });
     let split2 = new SplitText(subheaderRef.current, { type: "lines" });
 
     // split.chars.forEach((c) => (c.style.display = "inline"));
@@ -23,6 +24,7 @@ const Hero = () => {
 
     let chars = split.chars;
     let lines = split2.lines;
+    let lines2 = split3.lines;
 
     gsap.from(chars, {
       opacity: 0,
@@ -31,6 +33,16 @@ const Hero = () => {
       ease: "expo.out",
       yPercent: 100,
       delay: .5,
+    });
+
+    gsap.from(lines2, {
+      opacity: 0,
+      duration: 1,
+      stagger: 0.06,
+      ease: "expo.out",
+      yPercent: 100,
+      delay: .5,
+      x: 30
     });
 
     gsap.from(lines, {
