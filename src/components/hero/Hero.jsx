@@ -13,6 +13,8 @@ const Hero = () => {
   const subheaderRef = useRef(null);
   const pageRef = useRef(null);
   const imgRef = useRef(null);
+  const ctas = useRef(null);
+  const invite = useRef(null);
 
   useGSAP(() => {
     const ctx = gsap.context(() => {
@@ -53,6 +55,24 @@ const Hero = () => {
         stagger: 0.06,
         ease: "expo.out",
         delay: 1,
+      });
+
+      gsap.from(ctas.current, {
+        opacity: 0,
+        yPercent: 100,
+        duration: 0.8,
+        stagger: 0.06,
+        ease: "expo.out",
+        delay: 1,
+      });
+
+      
+      gsap.from(invite.current, {
+        opacity: 0,
+        yPercent: 100,
+        duration: 1,
+        ease: "expo.out",
+        delay: 2,
       });
 
       const tl = gsap.timeline({
@@ -100,11 +120,11 @@ const Hero = () => {
           culture, emotion, and purpose — turning every moment into an
           illuminated memory.
         </h4>
-        <div className="ctas">
+        <div className="ctas" ref={ctas}>
           <h3 className="cta">Illuminate Your Vision</h3>
           <h3 className="cta2">View Our Work</h3>
         </div>
-        <p>Scroll To Explore</p>
+        <p ref={invite}>Scroll To Explore</p>
       </div>
 
       <div className="bottom">
