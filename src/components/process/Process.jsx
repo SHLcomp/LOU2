@@ -5,6 +5,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
+import SplitText from "gsap/src/SplitText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,6 +25,36 @@ const Process = () => {
   const liRef7 = useRef(null)
 
   useGSAP(()=>{
+
+    let split = new SplitText(title2Ref.current, { type: "chars" });
+    let split2 = new SplitText(title2Ref.current, { type: "lines" });
+
+    // split.chars.forEach((c) => (c.style.display = "inline"));
+    // split2.lines.forEach((l) => (l.style.display = "inline"));
+
+    let chars = split.chars;
+    let lines = split2.lines;
+
+
+    gsap.from(chars, {
+      opacity: 0,
+      duration: 0.006,
+      stagger: 0.006,
+      ease: "expo.out",
+      yPercent: 100,
+      delay: 0.5,
+    });
+
+    gsap.from(lines, {
+      opacity: 0,
+      duration: .04,
+      stagger: 0.06,
+      ease: "expo.out",
+      yPercent: 100,
+      delay: 0.5,
+      x: 30,
+    });
+
     const tl = gsap.timeline({
       scrollTrigger:{
         trigger: pageRef.current,
