@@ -62,7 +62,8 @@ const Hero = () => {
     <div className="hero noise" ref={pageRef}>
       <div className="top">
         <h1 ref={headerRef}>
-          L<span>ight</span> O<span>f the</span> U<span>niverse</span>
+          {/* L<span>ight</span> O<span>f the</span> U<span>niverse</span> */}
+          <span>L</span>.<span>O</span>.<span>U</span>
         </h1>
         <h4 ref={subheaderRef}>
           Light of the Universe crafts extraordinary experiences through
