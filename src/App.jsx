@@ -1,23 +1,27 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
+import { useEffect } from "react";
 import Lenis from "lenis";
 
 function App() {
+ useEffect(() => {
     const lenis = new Lenis({
-    autoRaf: true,
-  });
+      smooth: true,
+      lerp: 0.1,
+    });
 
-  // Listen for the scroll event and log the event data
-  lenis.on("scroll", (e) => {
-    console.log(e);
-  });
-  function raf(time) {
-    lenis.raf(time);
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
     requestAnimationFrame(raf);
-  }
 
-  requestAnimationFrame(raf);
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
 
 
 

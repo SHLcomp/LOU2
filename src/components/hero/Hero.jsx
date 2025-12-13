@@ -66,7 +66,7 @@ const Hero = () => {
     });
 
     tl.to(imgRef.current, {
-      y: "-100vh",
+      y: "-140vh",
       x: "30vw",
       display: "none",
       ease:"expo.out"
