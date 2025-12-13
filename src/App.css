@@ -24,7 +24,7 @@ body{
   }
 }
 .cta2 {
-  padding-block: 5px;
+  padding-block: 10px;
   padding-inline: 10px;
   border-radius: 10px;
   color: var(--text-light);
@@ -94,5 +94,5 @@ body{
 }
 
 /* git add .
-git commit -m "Update many things"
+git commit -m "Added a scroll invite, and fixed some styles"
 git push origin main */

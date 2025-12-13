@@ -104,6 +104,7 @@ const Hero = () => {
           <h3 className="cta">Illuminate Your Vision</h3>
           <h3 className="cta2">View Our Work</h3>
         </div>
+        <p>Scroll To Explore</p>
       </div>
 
       <div className="bottom">
