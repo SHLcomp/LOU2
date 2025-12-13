@@ -25,10 +25,11 @@ const Services = () => {
         const tl2 = gsap.timeline({
             scrollTrigger:{
                 trigger: pageRef.current,
-                start: "center 80%",
+                start: "center 70%",
                 end: "bottom 30%",
                 pin: pinnedRef.current,
                 scrub: true,
+                markers:true
             }
         });
 
